@@ -8,14 +8,14 @@ const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN);
 /* Utility commands */
 bot.on('/start', (msg) => {
     functions.readFun(function (fortune) {
-        activeId[msg.from.id] = 1;
+        isActiveId[msg.from.id] = 1;
         return bot.sendMessage(msg.from.id, "Hello user\n" + fortune);
     });
 });
 
 bot.on('/stop', (msg) => {
     functions.readFun(function (fortune) {
-        activeId[msg.from.id] = 0;
+        isActiveId[msg.from.id] = 0;
         return bot.sendMessage(msg.from.id, "Goodbye user\n" + fortune);
     });
 });
