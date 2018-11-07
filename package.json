@@ -1,0 +1,25 @@
+{
+  "name": "r2fortune-bot",
+  "version": "1.0.0",
+  "description": "Take radare's fortune with you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Killuaa27/r2fortune-bot.git"
+  },
+  "keywords": [
+    "radare2",
+    "telegram",
+    "bot",
+    "fortune"
+  ],
+  "author": "Luigi Sciolla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Killuaa27/r2fortune-bot/issues"
+  },
+  "homepage": "https://github.com/Killuaa27/r2fortune-bot#readme"
+}
