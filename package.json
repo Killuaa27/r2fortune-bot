@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/Killuaa27/r2fortune-bot/issues"
   },
-  "homepage": "https://github.com/Killuaa27/r2fortune-bot#readme"
+  "homepage": "https://github.com/Killuaa27/r2fortune-bot#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "fs": "0.0.1-security",
+    "telebot": "^1.2.6"
+  }
 }
