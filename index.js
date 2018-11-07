@@ -8,14 +8,14 @@ const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN);
 /* Utility commands */
 bot.on('/start', (msg) => {
     functions.readFun(function (fortune) {
-        isActiveId[msg.from.id] = 1;
+        isActiveId[msg.from.id] = true;
         return bot.sendMessage(msg.from.id, "Hello user\n" + fortune);
     });
 });
 
 bot.on('/stop', (msg) => {
     functions.readFun(function (fortune) {
-        isActiveId[msg.from.id] = 0;
+        isActiveId[msg.from.id] = false;
         return bot.sendMessage(msg.from.id, "Goodbye user\n" + fortune);
     });
 });
@@ -51,7 +51,6 @@ bot.on(/fun*/i, (msg) => {
 
 /* Read nsfw */
 bot.on(/nsfw*/i, (msg) => {
-    console.log("nsfw");
     if (isActiveId[msg.from.id] !== false) {
         functions.readNsfw(function (fortune) {
             return bot.sendMessage(msg.from.id, fortune, {
@@ -63,7 +62,6 @@ bot.on(/nsfw*/i, (msg) => {
 
 /* Read tip */
 bot.on(/tip*/i, (msg) => {
-    console.log("tip");
     if (isActiveId[msg.from.id] !== false) {
         functions.readTip(function (fortune) {
             return bot.sendMessage(msg.from.id, fortune, {
